@@ -20,6 +20,14 @@ style: |
       font-size: 48px;
     }
 
+    .slide pre code {
+      line-height: 1.5em;
+    }
+
+    .picture h2 {
+      display: none;
+    }
+
     .godfather {
       background-color: #000;
       color: #FFF;
@@ -68,7 +76,7 @@ style: |
 
 ![](pictures/cover.jpg)
 
-## Godfather
+## Codestyle is important
 {: .godfather }
 
 You develop but you don't code with respect
@@ -77,7 +85,98 @@ You develop but you don't code with respect
 You don't even follow the codestyle
 {: .bottom }
 
-## Link to Frontend Babel article
+## JSCS
+
+* <code>
+    npm install jscs
+  </code>
+* Friednly to other tools
+* Supported by editors
+* Presets
+* Tunable
+
+## .jscsrc
+
+    {
+        "preset": "airbnb",
+
+        "validateIndentation": 2,
+        "requireMultipleVarDecl": true,
+
+        "excludeFiles": [
+          "node_modules/**"
+        ]
+    }
+
+## One by one
+
+    {
+        ...
+
+        "excludeFiles": [
+          "node_modules/**",
+          <mark>"src/**",</mark>
+          <mark>"src/parser.js",</mark>
+          <mark>"src/server.js"</mark>
+        ]
+    }
+
+## Pushy
+{: .picture }
+
+![](pictures/pushy.jpg)
+
+## Division of responsibility
+
+<table><tr>
+<td markdown="1">
+
+### our repository
+*must be clean*
+
+* No build to unclean code
+* Travis + Github
+
+</td><td markdown="1">
+
+### your repository
+*may be clean*
+
+* Editor
+* Pre-comit hooks
+
+</td>
+</tr></table>
+
+## Check. Then check again
+
+## Some tips
+
+## In of memory
+
+    gulp.task('jscs', function() {
+      return gulp.src([
+        '**/*.js'
+      ])
+      <mark class="important">.pipe(gulpIgnore.exclude([</mark>
+        <mark class="important">'node_modules/**',</mark>
+        <mark class="important">'demo-output/**'</mark>
+      <mark class="important">]))</mark>
+      .pipe(jscs());
+    });
+
+## Never stop watching
+
+    gulp.task('jscs', function() {
+      return gulp.src([
+        '**/*.js'
+      ])
+      ...
+      <mark class="important">.pipe(plumber())</mark>
+      .pipe(jscs());
+    });
+
+## Why?
 {: .with-link}
 
 [bit.ly/why-jscs](http://bit.ly/why-jscs)
@@ -91,6 +190,12 @@ href="https://t.co/W98EMSiTN5">https://t.co/W98EMSiTN5</a> cc <a
 href="https://twitter.com/valueof">@valueof</a></p>&mdash; Mike Sherov (@mikesherov) <a
 href="https://twitter.com/mikesherov/status/419596672520318976">4 января 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## JSLint
+
+<code>
+gulp.task('jslint', [ 'jshint', 'jscs' ]);
+</code>
 
 
 ## Slide with timer
