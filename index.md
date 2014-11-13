@@ -13,6 +13,13 @@ style: |
         color:#FFF;
         }
 
+    .slide>div {
+      padding-top: 48px;
+    }
+    .slide h2 {
+      font-size: 48px;
+    }
+
     .godfather {
       background-color: #000;
       color: #FFF;
@@ -74,6 +81,16 @@ You don't even follow the codestyle
 {: .with-link}
 
 [bit.ly/why-jscs](http://bit.ly/why-jscs)
+
+## JSHint ❤ JSCS
+{: .jshint }
+
+<blockquote class="twitter-tweet" lang="ru"><p>And with that, JSCS now has all the style enforcement rules that are
+being dropped in <a href="https://twitter.com/JSHint">@JSHint</a> 3.0: <a
+href="https://t.co/W98EMSiTN5">https://t.co/W98EMSiTN5</a> cc <a
+href="https://twitter.com/valueof">@valueof</a></p>&mdash; Mike Sherov (@mikesherov) <a
+href="https://twitter.com/mikesherov/status/419596672520318976">4 января 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 ## Slide with timer
