@@ -3,30 +3,62 @@
 layout: default
 
 style: |
-    #Cover h2 {
-        margin:65px 0 0;
-        color:#FFF;
-        text-align:center;
-        font-size:70px;
-        }
-    #Picture h2 {
-        color:#FFF;
-        }
 
-    .slide>div {
-      padding-top: 48px;
-    }
-    .slide h2 {
-      font-size: 48px;
-    }
+  .slide>div {
+    padding-top: 48px;
+  }
+  .slide h2 {
+    font-size: 48px;
+  }
 
-    .slide pre code {
-      line-height: 1.5em;
-    }
+  .slide pre code {
+    line-height: 1.5em;
+  }
+
+  #Cover {
+    background-color: #F1DA4E;
+    background-image: url(pictures/jscs.png);
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #Cover div {
+    text-align:center;
+  }
+  #Cover h2 {
+    display: none;
+  }
+  #Cover h3 {
+    position: absolute;
+    bottom: 0;
+    width: 800px;
+    text-align: center;
+    font-size: 48px;
+  }
+
+  #Picture h2 {
+    color:#FFF;
+  }
 
     .picture h2 {
       display: none;
     }
+
+  .me .avatar {
+    width: 400px;
+    height: 400px;
+    background-image: url(pictures/varya.jpg);
+    background-size: 400px auto;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    float: left;
+    margin-right: 48px;
+  }
+  
+  .me h3 {
+    font-size: 36px;
+  }
 
     .godfather {
       background-color: #000;
@@ -74,7 +106,16 @@ style: |
 # JavaScript CodeStyle. Automatically!
 {: .cover #Cover }
 
-![](pictures/cover.jpg)
+### in use at SC5
+
+## me
+{: .me }
+
+<div class="avatar"></div>
+
+###Varya Stepanova
+
+Senior Frontend Developer @ SC5 Online
 
 ## Codestyle is important
 {: .godfather }
@@ -99,14 +140,42 @@ You don't even follow the codestyle
 
     {
         "preset": "airbnb",
+        <mark class="comment">/*
+        "preset": crockford,
+        "preset": google,
+        "preset": jquery,
+        "preset": mdcs,
+        "preset": wikimedia,
+        "preset": yandex
+        */</mark>
+    }
 
-        "validateIndentation": 2,
-        "requireMultipleVarDecl": true,
+## to exclude
+
+    {
+        "preset": "airbnb",
+
+        <mark class="important">"excludeFiles"</mark>: [
+          "node_modules/**"
+        ]
+    }
+
+## to extend
+
+    {
+        "preset": "airbnb",
+
+        <mark class="important">"validateIndentation": 2,</mark>
+        <mark class="important">"requireMultipleVarDecl": true,</mark>
 
         "excludeFiles": [
           "node_modules/**"
         ]
+
     }
+
+## How it went
+{:.shout}
 
 ## One by one
 
@@ -115,9 +184,9 @@ You don't even follow the codestyle
 
         "excludeFiles": [
           "node_modules/**",
-          <mark>"src/**",</mark>
-          <mark>"src/parser.js",</mark>
-          <mark>"src/server.js"</mark>
+          <mark class="next">"src/**",</mark>
+          <mark class="next">"src/parser.js",</mark>
+          <mark class="next">"src/server.js"</mark>
         ]
     }
 
@@ -151,6 +220,7 @@ You don't even follow the codestyle
 ## Check. Then check again
 
 ## Some tips
+{:.shout}
 
 ## In of memory
 
@@ -197,20 +267,7 @@ href="https://twitter.com/mikesherov/status/419596672520318976">4 января 2
 gulp.task('jslint', [ 'jshint', 'jscs' ]);
 </code>
 
-
-## Slide with timer
-{: data-timing="00:05" }
-
-It will change right in five seconds
-
 <footer>Presenter note for the first slide</footer>
-
-
-## Heading
-
-In your slides text you can use [links](http://google.com/) and various inline elements for _emotional_ and **strong** emphasis or just for <i>italic</i> or <b>bold</b> decoration. `<code>` is used for inline code samples.
-
-<footer>Presenter note for the second slide</footer>
 
 
 ## Two rows.<br> Mighty heading
@@ -242,17 +299,6 @@ This paragraph could be used as a footnote
 </figure>
 
 
-## When you have a lot of code
-
-    <html lang="en">
-    <mark><head></mark> <mark class="comment"><!--Comment--></mark>
-        <title>Shower</title>
-        <meta charset="<mark class="important">UTF-8</mark>">
-        <link rel="stylesheet" href="s/screen.css">
-        <script src="j/jquery.js"></script>
-    <mark></head></mark>
-
-
 ## Code in separate blocks
 
     <mark><html</mark> lang="en">
@@ -264,10 +310,6 @@ Now you can add a note for each block
 
 And explain what is interesting about it
 {:.note}
-
-
-## You can shout<br> this way
-{:.shout}
 
 
 ## And place any picture
@@ -285,10 +327,10 @@ And explain what is interesting about it
 5. {:.next} But it will work only once
 
 
-## JavaScript Code Style. Automatically
+## JavaScript Code Style. Automatically!
 
 Varya Stepanova, SC5 Online
 
-- [pepelsbey.net](http://pepelsbey.net)
-- [twitter.com/pepelsbey](http://twitter.com/pepelsbey)
-- [pepelsbey@gmail.com](mailto:pepelsbey@gmail.com)
+- [varya.me](http://varya.me)
+- [@varya_en](http://twitter.com/varya_en)
+- [mail@varya.me](mailto:mail@varya.me)

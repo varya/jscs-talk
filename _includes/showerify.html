@@ -35,5 +35,5 @@
         {% assign flag = true %}
     {% endif %}
 {% endfor %}
-{% capture showerify_output %}{{ showerify_middle | replace:'class="slide" class="':'class="slide ' | replace:'&lt;/mark&gt;':'</mark>' | replace:'&lt;mark&gt;':'<mark>' | replace:'&lt;mark class="comment"&gt;':'<mark class="comment">' | replace:'&lt;mark class="important"&gt;':'<mark class="important">' }}{% endcapture %}
+{% capture showerify_output %}{{ showerify_middle | replace:'class="slide" class="':'class="slide ' | replace:'&lt;/mark&gt;':'</mark>' | replace:'&lt;mark&gt;':'<mark>' | replace:'&lt;mark class="comment"&gt;':'<mark class="comment">' | replace:'&lt;mark class="next"&gt;':'<mark class="next">' | replace:'&lt;mark class="important"&gt;':'<mark class="important">' }}{% endcapture %}
 {% endcapture %}
