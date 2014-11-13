@@ -12,6 +12,41 @@ style: |
     #Picture h2 {
         color:#FFF;
         }
+
+    .godfather {
+      background-color: #000;
+      color: #FFF;
+    }
+    .godfather div {
+      text-align: center;
+      background-image: url(pictures/godfather.png);
+      background-size: 75%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      text-transform: uppercase;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: black;
+      font-family: Impact;
+      font-size: 40px;
+    }
+    .godfather::after {
+      content: '';
+    }
+    .godfather h2 {
+      display: none;
+    }
+    .godfather .top {
+      position: absolute;
+      top: 25px;
+      width: 800px;
+    }
+    .godfather .bottom {
+      position: absolute;
+      bottom: 0;
+      width: 800px;
+      font-size: 45px;
+    }
+
     .with-link div {
       font-size: 120px;
     }
@@ -25,6 +60,15 @@ style: |
 {: .cover #Cover }
 
 ![](pictures/cover.jpg)
+
+## Godfather
+{: .godfather }
+
+You develop but you don't code with respect
+{: .top}
+
+You don't even follow the codestyle
+{: .bottom }
 
 ## Link to Frontend Babel article
 {: .with-link}
