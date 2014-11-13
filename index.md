@@ -12,13 +12,24 @@ style: |
     #Picture h2 {
         color:#FFF;
         }
+    .with-link div {
+      font-size: 120px;
+    }
+    .with-link h2 {
+      display: none;
+    }
 
 ---
 
-# Shower Presentation Engine
+# JavaScript CodeStyle. Automatically!
 {: .cover #Cover }
 
 ![](pictures/cover.jpg)
+
+## Link to Frontend Babel article
+{: .with-link}
+
+[bit.ly/why-jscs](http://bit.ly/why-jscs)
 
 
 ## Slide with timer
@@ -108,9 +119,9 @@ And explain what is interesting about it
 5. {:.next} But it will work only once
 
 
-## Shower Presentation Engine
+## JavaScript Code Style. Automatically
 
-Vadim Makeev, Opera Software
+Varya Stepanova, SC5 Online
 
 - [pepelsbey.net](http://pepelsbey.net)
 - [twitter.com/pepelsbey](http://twitter.com/pepelsbey)
