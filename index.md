@@ -129,10 +129,11 @@ You don't even follow the codestyle
 
 ## What to use?
 
-* JSLint
-* JSHint
-* JSCS
-{: .next }
+<ul>
+<li>JSLint</li>
+<li>JSHint</li>
+<li class="next">JSCS</li>
+</ul>
 
 
 ## JSHint ❤ JSCS
@@ -153,6 +154,25 @@ gulp.task('jslint', [ 'jshint', 'jscs' ]);
 
 <footer>Presenter note for the first slide</footer>
 
+
+## JSCS in use
+{: .logos }
+
+![](pictures/bootstrap.png)
+![](pictures/jquery.png)
+![](pictures/angular.png)
+
+<style>
+.logos img {
+  width: 450px;
+  margin-bottom: 50px;
+}
+.logos img:nth-child(1) {
+  width: 250px;
+  margin-left: 30px;
+  float: right;
+}
+</style>
 
 ## JSCS
 
@@ -255,6 +275,7 @@ gulp.task('jslint', [ 'jshint', 'jscs' ]);
 ## ToDo
 
 screenshots of editor plugins & precommit hooks
+https://yannick.cr/
 
 ## ToDo2
 
