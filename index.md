@@ -4,11 +4,17 @@ layout: default
 
 style: |
 
+  .slide.large {
+    font-size: 36px;
+  }
   .slide>div {
     padding-top: 48px;
   }
   .slide h2 {
     font-size: 48px;
+  }
+  .slide h3 {
+    font-size: 36px;
   }
 
   .slide pre code {
@@ -40,9 +46,9 @@ style: |
     color:#FFF;
   }
 
-    .picture h2 {
-      display: none;
-    }
+  .picture h2 {
+    display: none;
+  }
 
   .me .avatar {
     width: 400px;
@@ -60,46 +66,46 @@ style: |
     font-size: 36px;
   }
 
-    .godfather {
-      background-color: #000;
-      color: #FFF;
-    }
-    .godfather div {
-      text-align: center;
-      background-image: url(pictures/godfather.png);
-      background-size: 75%;
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      text-transform: uppercase;
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: black;
-      font-family: Impact;
-      font-size: 40px;
-    }
-    .godfather::after {
-      content: '';
-    }
-    .godfather h2 {
-      display: none;
-    }
-    .godfather .top {
-      position: absolute;
-      top: 25px;
-      width: 800px;
-    }
-    .godfather .bottom {
-      position: absolute;
-      bottom: 0;
-      width: 800px;
-      font-size: 45px;
-    }
+  .godfather {
+    background-color: #000;
+    color: #FFF;
+  }
+  .godfather div {
+    text-align: center;
+    background-image: url(pictures/godfather.png);
+    background-size: 75%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-family: Impact;
+    font-size: 40px;
+  }
+  .godfather::after {
+    content: '';
+  }
+  .godfather h2 {
+    display: none;
+  }
+  .godfather .top {
+    position: absolute;
+    top: 25px;
+    width: 800px;
+  }
+  .godfather .bottom {
+    position: absolute;
+    bottom: 0;
+    width: 800px;
+    font-size: 45px;
+  }
 
-    .with-link div {
-      font-size: 120px;
-    }
-    .with-link h2 {
-      display: none;
-    }
+  .with-link div {
+    font-size: 120px;
+  }
+  .with-link h2 {
+    display: none;
+  }
 
 ---
 
@@ -127,7 +133,8 @@ You don't even follow the codestyle
 {: .bottom }
 
 
-## What to use?
+## JavaScript linting tools
+{: .large }
 
 <ul>
 <li>JSLint</li>
@@ -176,16 +183,16 @@ gulp.task('jslint', [ 'jshint', 'jscs' ]);
 
 ## JSCS
 
-* <code>
-    npm install jscs
-  </code>
-* Friednly to other tools
-* Supported by editors
+    $ npm install jscs
+
+* project-dependent with `.jscsrc`
 * Presets
 * Tunable
+* Friednly to grunt, gulp
+* Supported by editors
 
 
-## .jscsrc
+## .jscsrc presets
 
     {
         "preset": "airbnb",
@@ -236,9 +243,9 @@ gulp.task('jslint', [ 'jshint', 'jscs' ]);
 
         "excludeFiles": [
           "node_modules/**",
-          <mark class="next">"src/**",</mark>
-          <mark class="next">"src/parser.js",</mark>
-          <mark class="next">"src/server.js"</mark>
+          "src/modules/a/**",
+          "src/modules/b/**",
+          "src/*.js
         ]
     }
 
@@ -250,20 +257,22 @@ gulp.task('jslint', [ 'jshint', 'jscs' ]);
 
 
 ## Division of responsibility
+{: .division }
 
 <table><tr>
 <td markdown="1">
 
 ### our repository
-*must be clean*
 
-* No build to unclean code
-* Travis + Github
+<b class="must">must be clean</b>
+
+* Pull requests
+* Travis
 
 </td><td markdown="1">
 
 ### your repository
-*may be clean*
+<b class="may">may be clean</b>
 
 * Editor
 * Pre-comit hooks
@@ -271,16 +280,27 @@ gulp.task('jslint', [ 'jshint', 'jscs' ]);
 </td>
 </tr></table>
 
+<style>
 
-## ToDo
+.division .must {
+  color: green;
+}
+.division .may {
+  color: darkorange;
+}
 
-screenshots of editor plugins & precommit hooks
-https://yannick.cr/
+</style>
 
-## ToDo2
 
-Result: clean repo
-Todo: quates of people who like it
+## Editor plugins
+
+![](pictures/sublime.gif)
+
+
+## Travis builds
+
+![](pictures/travis.png)
+
 
 ## Some tips
 {:.shout}
@@ -318,10 +338,20 @@ Todo: quates of people who like it
 [bit.ly/why-jscs](http://bit.ly/why-jscs)
 
 
-## JavaScript Code Style. Automatically!
+## JSCS in use
+{: .bye-bye }
 
 Varya Stepanova, SC5 Online
+
+[varya.me/jscs-talk](http://varya.me/jscs-talk/)
+{: .large }
 
 - [varya.me](http://varya.me)
 - [@varya_en](http://twitter.com/varya_en)
 - [mail@varya.me](mailto:mail@varya.me)
+
+<style>
+.bye-bye .large {
+  font-size: 48px;
+}
+</style>
