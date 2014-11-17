@@ -55,7 +55,7 @@ style: |
     float: left;
     margin-right: 48px;
   }
-  
+
   .me h3 {
     font-size: 36px;
   }
@@ -126,6 +126,34 @@ You develop but you don't code with respect
 You don't even follow the codestyle
 {: .bottom }
 
+
+## What to use?
+
+* JSLint
+* JSHint
+* JSCS
+{: .next }
+
+
+## JSHint ❤ JSCS
+{: .jshint }
+
+<blockquote class="twitter-tweet" lang="ru"><p>And with that, JSCS now has all the style enforcement rules that are
+being dropped in <a href="https://twitter.com/JSHint">@JSHint</a> 3.0: <a
+href="https://t.co/W98EMSiTN5">https://t.co/W98EMSiTN5</a> cc <a
+href="https://twitter.com/valueof">@valueof</a></p>&mdash; Mike Sherov (@mikesherov) <a
+href="https://twitter.com/mikesherov/status/419596672520318976">4 января 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## JSLint*
+
+<code>
+gulp.task('jslint', [ 'jshint', 'jscs' ]);
+</code>
+
+<footer>Presenter note for the first slide</footer>
+
+
 ## JSCS
 
 * <code>
@@ -135,6 +163,7 @@ You don't even follow the codestyle
 * Supported by editors
 * Presets
 * Tunable
+
 
 ## .jscsrc
 
@@ -149,6 +178,7 @@ You don't even follow the codestyle
         "preset": yandex
         */</mark>
     }
+
 
 ## to exclude
 
@@ -174,8 +204,10 @@ You don't even follow the codestyle
 
     }
 
-## How it went
+
+## In use
 {:.shout}
+
 
 ## One by one
 
@@ -190,10 +222,12 @@ You don't even follow the codestyle
         ]
     }
 
+
 ## Pushy
 {: .picture }
 
 ![](pictures/pushy.jpg)
+
 
 ## Division of responsibility
 
@@ -217,10 +251,19 @@ You don't even follow the codestyle
 </td>
 </tr></table>
 
-## Check. Then check again
+
+## ToDo
+
+screenshots of editor plugins & precommit hooks
+
+## ToDo2
+
+Result: clean repo
+Todo: quates of people who like it
 
 ## Some tips
 {:.shout}
+
 
 ## In of memory
 
@@ -235,6 +278,7 @@ You don't even follow the codestyle
       .pipe(jscs());
     });
 
+
 ## Never stop watching
 
     gulp.task('jscs', function() {
@@ -246,85 +290,11 @@ You don't even follow the codestyle
       .pipe(jscs());
     });
 
+
 ## Why?
 {: .with-link}
 
 [bit.ly/why-jscs](http://bit.ly/why-jscs)
-
-## JSHint ❤ JSCS
-{: .jshint }
-
-<blockquote class="twitter-tweet" lang="ru"><p>And with that, JSCS now has all the style enforcement rules that are
-being dropped in <a href="https://twitter.com/JSHint">@JSHint</a> 3.0: <a
-href="https://t.co/W98EMSiTN5">https://t.co/W98EMSiTN5</a> cc <a
-href="https://twitter.com/valueof">@valueof</a></p>&mdash; Mike Sherov (@mikesherov) <a
-href="https://twitter.com/mikesherov/status/419596672520318976">4 января 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-## JSLint
-
-<code>
-gulp.task('jslint', [ 'jshint', 'jscs' ]);
-</code>
-
-<footer>Presenter note for the first slide</footer>
-
-
-## Two rows.<br> Mighty heading
-
-You can use two lines header but it would reduce space on a slide. The “Ribbon” theme is designed for seven lines of code after one-line header by default.
-
-This paragraph could be used as a footnote
-{:.note}
-
-
-## Various lists
-
-- Simple lists are marked with bullets.
-- Ordered lists begin with a number.
-- You can even nest lists one inside another.
-    1. Or mix their types.
-    2. But do not go too far.
-    3. Otherwise audience will be bored.
-- Look, seven rows exactly!
-
-
-## Serious citation
-
-<figure>
-    <blockquote>
-        <p>You can wrap one or more paragraphs into citation, which will make text italic and add a nice quote on the left. Giving the citation source would make it even more serious.</p>
-    </blockquote>
-    <figcaption>Vadim Makeev</figcaption>
-</figure>
-
-
-## Code in separate blocks
-
-    <mark><html</mark> lang="en">
-
-Now you can add a note for each block
-{:.note}
-
-    <mark><meta</mark> charset="<mark>UTF-8</mark>">
-
-And explain what is interesting about it
-{:.note}
-
-
-## And place any picture
-{:.cover #Picture}
-
-![](pictures/picture.jpg)
-
-
-## Inner navigation
-
-1. Lets you change objects one by one
-2. {:.next} For example, show list items
-3. {:.next} Or switch pictures
-4. {:.next} And much more
-5. {:.next} But it will work only once
 
 
 ## JavaScript Code Style. Automatically!
