@@ -353,6 +353,11 @@ href="https://twitter.com/mikesherov/status/419596672520318976">4 января 2
       .pipe(jscs());
     });
 
+## JSCS
+{: .cover }
+
+![](pictures/happy-cat.jpg)
+
 
 ## Why?
 {: .with-link}
