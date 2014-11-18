@@ -21,6 +21,10 @@ style: |
     line-height: 1.5em;
   }
 
+  .slide mark.next {
+    background-color: transparent;
+  }
+
   #Cover {
     background-color: #F1DA4E;
     background-image: url(pictures/jscs.png);
@@ -139,7 +143,7 @@ You don't even follow the codestyle
 <ul>
 <li>JSLint</li>
 <li>JSHint</li>
-<li class="next">JSCS</li>
+<li>JSCS</li>
 </ul>
 
 
@@ -153,11 +157,13 @@ href="https://twitter.com/valueof">@valueof</a></p>&mdash; Mike Sherov (@mikeshe
 href="https://twitter.com/mikesherov/status/419596672520318976">4 января 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-## JSLint*
+## <s>JSLint</s>
+{: .large }
 
-<code>
-gulp.task('jslint', [ 'jshint', 'jscs' ]);
-</code>
+    gulp.task('jslint',
+      [ 'jshint', 'jscs' ]
+    );
+
 
 <footer>Presenter note for the first slide</footer>
 
@@ -237,6 +243,7 @@ gulp.task('jslint', [ 'jshint', 'jscs' ]);
 
 
 ## One by one
+{: .one-by-one }
 
     {
         ...
@@ -248,6 +255,21 @@ gulp.task('jslint', [ 'jshint', 'jscs' ]);
           "src/*.js
         ]
     }
+
+* Change file
+* Change codestyle
+* Remove from excluded
+
+<style>
+.one-by-one pre {
+  float: left;
+  margin-right: 100px;
+}
+.one-by-one ul {
+  margin-top: 125px;
+  font-size: 32px;
+}
+</style>
 
 
 ## Pushy
@@ -312,10 +334,10 @@ gulp.task('jslint', [ 'jshint', 'jscs' ]);
       return gulp.src([
         '**/*.js'
       ])
-      <mark class="important">.pipe(gulpIgnore.exclude([</mark>
+      <mark class="next"><mark class="important">.pipe(gulpIgnore.exclude([</mark>
         <mark class="important">'node_modules/**',</mark>
         <mark class="important">'demo-output/**'</mark>
-      <mark class="important">]))</mark>
+      <mark class="important">]))</mark></mark>
       .pipe(jscs());
     });
 
@@ -327,7 +349,7 @@ gulp.task('jslint', [ 'jshint', 'jscs' ]);
         '**/*.js'
       ])
       ...
-      <mark class="important">.pipe(plumber())</mark>
+      <mark class="next"><mark class="important">.pipe(plumber())</mark></mark>
       .pipe(jscs());
     });
 
