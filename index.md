@@ -284,7 +284,7 @@ href="https://twitter.com/mikesherov/status/419596672520318976">4 января 2
 <table><tr>
 <td markdown="1">
 
-### our repository
+### upstream repository
 
 <b class="must">must be clean</b>
 
@@ -293,7 +293,7 @@ href="https://twitter.com/mikesherov/status/419596672520318976">4 января 2
 
 </td><td markdown="1">
 
-### your repository
+### your fork
 <b class="may">may be clean</b>
 
 * Editor
